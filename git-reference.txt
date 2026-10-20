@@ -1,0 +1,88 @@
+﻿仓库
+
+  新建本地仓库
+    输入命令：git init
+
+  克隆远程仓库
+    HTTPS 通道
+      输入命令： git clone https://github.com/{1}/{2}.git
+    SSH 通道
+      输入命令： git clone git@github.com:{1}/{2}.git
+    Github CLI
+      输入命令： gh repo clone {1}/{2}
+    #1： 目标 Github 用户的名称。
+    #2： 目标 Github 仓库的名称。
+
+  添加远程仓库
+    HTTPS 通道
+      输入命令： git remote add {1} https://github.com/{2}/{3}.git
+    SSH 通道
+      输入命令： git remote add {1} git@github.com:{2}/{3}.git
+    #1： 本地给该远程仓库取的名称。
+    #2： 目标 Github 用户的名称。
+    #3： 目标 Github 仓库的名称。
+
+  重设远程仓库
+    HTTPS 通道
+      输入命令： git remote set-url {1} https://github.com/{2}/{3}.git
+    SSH 通道
+      输入命令： git remote set-url {1} git@github.com:{2}/{3}.git
+    #1： 已有的远程仓库的本地名称。
+    #2： 目标 Github 用户的名称。
+    #3： 目标 Github 仓库的名称。
+
+分支
+
+  新建本地分支
+    输入命令： git branch {1}
+    #1： 自定义的分支名称。
+
+  重命名当前分支
+    输入命令： git branch {1} {2}
+    #1： -m 或 --move 。
+    #2： 自定义的分支名称。
+
+  查看
+
+    列出所有本地分支
+      输入命令： git branch
+
+    列出所有远程分支
+      输入命令： git branch {1}
+      #1： -r 、 --remote 或 --remotes 。
+
+    列出所有分支
+      输入命令： git branch {1}
+      #1： -a 或 --all 。
+
+  切换分支
+    输入命令： git switch {1}
+    #1： 目标分支的名称。
+
+提交
+
+  跟踪文件变动
+    输入命令： git add {*N}
+    #N： 已有的文件或非空目录的名称。
+
+  添加消息（仅标题）
+    输入命令： git commit {1} "{2}"
+    #1： -m 或 --message 。
+    #2： 自定义的消息标题。
+
+  添加消息（标题和正文）
+    输入命令： git commit {1} "{2}" {3} "{4}"
+    #1 #3： -m 或 --message 。
+    #2： 自定义的消息标题。
+    #4： 自定义的消息正文。
+
+  修改消息（仅标题）
+    输入命令： git commit --amend {1} "{2}"
+    #1： -m 或 --message 。
+    #2： 自定义的消息标题。
+
+  修改消息（标题和正文）
+    输入命令： git commit --amend {1} "{2}" {3} "{4}"
+    #1 #3： -m 或 --message 。
+    #2： 自定义的消息标题。
+    #4： 自定义的消息正文。
